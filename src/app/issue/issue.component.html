@@ -1,0 +1,41 @@
+<div class="container">
+    <h3>create Issue</h3>
+    <form [formGroup]="issueForm" (ngSubmit)="submit()">
+       <mat-form-field appearance="standard">
+            <mat-label>Title</mat-label>
+            <input matInput formControlName="title">
+          </mat-form-field>
+          <mat-form-field appearance="standard">
+            <mat-label>client</mat-label>
+            <mat-select formControlName="client">
+                <mat-option value="C: Client ABC">Client ABC</mat-option>
+              <mat-option value="C: Client XYZ">Client XYZ</mat-option>
+              <mat-option value="C: Client MNO">Client MNO</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="standard">
+            <mat-label>priority</mat-label>
+            <mat-select formControlName="priority">
+              <mat-option value="P: Low">Low</mat-option>
+              <mat-option value="P: Medium">Medium</mat-option>
+              <mat-option value="P: High">High</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="standard">
+            <mat-label>type</mat-label>
+            <mat-select formControlName="type">
+              <mat-option value="T: Bug">Bug</mat-option>
+              <mat-option value="T: Support">Support</mat-option>
+              <mat-option value="T: Enhancement">Enhancement</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="standard">
+            <mat-label>Description</mat-label>
+            <textarea matInput formControlName="description"></textarea>
+          </mat-form-field>
+         <div mat-dialog-actions>
+            <button mat-raised-button color="primary" type="submit">Submit</button>
+        </div>
+    </form>
+
+</div>
